@@ -1,0 +1,33 @@
+mutation createArticle($imageUrls: [String!]!, $input: ArticleInput!) {
+  createArticle(imageUrls: $imageUrls, input: $input) {
+    body_1
+    body_2
+    body_3
+    creator {
+      id
+      createdAt
+      updatedAt
+    }
+    createdAt
+    creatorId
+    id
+    imageUrls
+    likes
+    title
+    updatedAt
+  }
+}
+
+# //ArticleInput
+#   @Field()
+#   title: string;
+#   @Field()
+#   body_1: string;
+#   @Field()
+#   body_2: string;
+#   @Field()
+#   body_3: string;
+#   @Field()
+#   body_4: string;
+#   @Field()
+#   body_5: string;

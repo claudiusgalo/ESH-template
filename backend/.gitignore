@@ -1,0 +1,8 @@
+// .env
+.env*.local
+//Files Being Ignored
+//BACKEND
+ESH-template/backend/dist
+ESH-template/backend/node_modules
+ESH-template/backend/.env
+ESH-template/backend/package-lock.json

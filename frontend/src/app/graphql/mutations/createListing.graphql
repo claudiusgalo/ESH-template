@@ -1,0 +1,40 @@
+mutation createListing($imageUrls: [String!]!, $input: ListingInput!) {
+  createListing(imageUrls: $imageUrls, input: $input) {
+    id
+    street_address
+    city
+    state
+    zip
+    country
+    zillow_link
+    has_sold
+    beds
+    bathrooms
+    square_footage
+    year
+    school_district
+    primary_school
+    secondary_school
+    tertiary_school
+    monthly_cost_30yr
+    monthly_cost_15yr
+    monthly_cost_10yr
+    monthly_cost_5yr
+    tags
+    creatorId
+    imageUrls
+    imageUrlsMedium
+    imageUrlsSmall
+    createdAt
+    updatedAt
+    creator {
+      id
+      first_name
+      last_name
+      username
+      email
+      createdAt
+      updatedAt
+    }
+  }
+}

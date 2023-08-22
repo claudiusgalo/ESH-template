@@ -1,0 +1,7 @@
+mutation signImages($imagePreviews: [String!]!) {
+  signImages(imagePreviews: $imagePreviews) {
+    getObjectKeys
+    signedUrls
+    imageUrls
+  }
+}

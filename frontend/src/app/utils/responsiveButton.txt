@@ -1,0 +1,24 @@
+      
+      
+        const [loadingMore, setLoadingMore] = useState(false);
+
+  const loadMoreData = () => {
+    // Your data fetching logic here
+    // For example, an API call or any asynchronous operation to fetch more data
+    // You can update this logic based on your actual data-fetching method
+
+    // For demonstration purposes, we simulate data fetching using setTimeout
+    setLoadingMore(true);
+    setTimeout(() => {
+      // Your data processing logic here
+      setLoadingMore(false);
+    }, 2000); // Simulating a 2-second loading time, replace it with the actual data fetching
+  };
+  
+      {data && (
+        <div className="flex">
+          <button className="m-auto my-4" onClick={loadMoreData} disabled={loadingMore}>
+            {loadingMore ? 'Loading...' : 'Load More'}
+          </button>
+        </div>
+      )}

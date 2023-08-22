@@ -1,0 +1,1 @@
+Post.delete({}) // Deletes all posts. (It might be worth awaiting this function.)

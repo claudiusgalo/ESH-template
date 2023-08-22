@@ -1,0 +1,42 @@
+# query userPosts($username: String!, $limit: Int!, $cursor: String) {
+#   userposts(username: $username, limit: $limit, cursor: $cursor) {
+#     posts {
+#       id
+#       title
+#       text
+#       createdAt
+#       updatedAt
+#       creator {
+#         id
+#         username
+#       }
+#     }
+#     hasMore
+#     #cursor <- Should add this once we are returning a cursor.
+#   }
+# }
+
+input PaginationInput {
+  limit: Int!
+  cursor: String
+  direction: String
+}
+
+query userPosts($username: String!, $pagination: PaginationInput!) {
+  userposts(username: $username, pagination: $pagination) {
+    posts {
+      id
+      title
+      text
+      createdAt
+      updatedAt
+      creator {
+        id
+        username
+      }
+    }
+    hasPrevious
+    hasMore
+    #cursor <- Should add this once we are returning a cursor.
+  }
+}

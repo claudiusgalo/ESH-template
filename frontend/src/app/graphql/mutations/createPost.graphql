@@ -1,0 +1,42 @@
+# mutation CreatePost($input: PostInput!) {
+#   createPost(
+#     input: $input
+#   ) {
+#     id
+#     title
+#     text
+#     likes
+#     creatorId
+#     createdAt
+#     updatedAt
+#   }
+# }
+
+# mutation CreatePost($input: PostInput!, $images: [String!]!) {
+#   createPost(input: $input, images: $images) {
+#     id
+#     title
+#     text
+#     creator {
+#       id
+#       username
+#     }
+#   }
+# }
+
+mutation createPost($input: PostInput!, $imageUrls: [String!]!) {
+  createPost(input: $input, imageUrls: $imageUrls) {
+    id
+    title
+    text
+    creatorId
+    createdAt
+    updatedAt
+    likes
+    imageUrls
+    creator {
+      id
+      username
+    }
+  }
+}

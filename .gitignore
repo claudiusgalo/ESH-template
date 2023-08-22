@@ -1,0 +1,16 @@
+//Files Being Ignored
+//BACKEND
+ESH-template/backend/dist
+ESH-template/backend/node_modules
+ESH-template/backend/.env
+ESH-template/backend/package-lock.json
+
+/backend/dist
+/backend/.env
+/backend/node_modules
+/backend/dist
+/backend/package-lock.json
+/frontend/node_modules
+/frontend/.next
+/frontend/package-lock.json
+
