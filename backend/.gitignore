@@ -1,8 +1,0 @@
-// .env
-.env*.local
-//Files Being Ignored
-//BACKEND
-backend/dist
-backend/node_modules
-backend/.env
-package-lock.json
